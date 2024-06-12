@@ -16,11 +16,11 @@ class AuthController extends Controller
 
     function loginPost(Request $request){
         $request->validate([
-            "email" => "require",
-            "password" => "require",
+            "email" => "required",
+            "password" => "required",
         ]);
         $credentials = $request->only("email", "password");
-        if(Auth::attempt([$credentials])){
+        if(Auth::attempt($credentials)){
             return redirect()->intended(route("home"));
         }
         return redirect(route("login"))->with("error", "Login Failed");
@@ -33,9 +33,9 @@ class AuthController extends Controller
     //Post Register function
     function registerPost(Request $request){
             $request->validate([
-                "fullname" => "require",
-                "email" => "require",
-                "password" => "require",
+                "fullname" => "required",
+                "email" => "required",
+                "password" => "required",
             ]);
 
             $user = new User();
