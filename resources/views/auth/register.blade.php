@@ -5,15 +5,25 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-4">
+                    @if (session()->has("success"))
+                        <div class="alert alert-success">
+                            {{session()->get("success")}}
+                        </div>
+                    @endif
+                    @if (session()->has("error"))
+                        <div class="alert alert-success">
+                            {{session()->get("error")}}
+                        </div>
+                    @endif
                     <div class="card">
-                        <h3 class="card-header text-center">Login</h3>
+                        <h3 class="card-header text-center">Register</h3>
                         <div class="card-body">
-                            <form method="POST" action="{{route("login.post")}}">
+                            <form method="POST" action="{{route("register.post")}}">
                                 @csrf
                                 <div class="form-group mb-3">
                                     <input type="text" placeholder="Fullname"
                                     id="name" class="form-control" name="fullname"
-                                    required autofocurs>
+                                    autofocurs>
                                 @if ($errors->has('fullname'))
                                 <span class="text-danger">
                                     {{ $errors->first('fullname') }}</span>
@@ -39,7 +49,7 @@
                                 </div>
                                 <div class="d-grid mx-auto">
                                     <button type="submit"
-                                            class="btn btn-dark btn-block">Signin</button>
+                                            class="btn btn-dark btn-block">SignUp</button>
                                 </div>
                             </form>
                         </div>
