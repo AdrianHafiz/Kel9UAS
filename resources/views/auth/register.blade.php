@@ -23,29 +23,49 @@
                                 <div class="form-group mb-3">
                                     <input type="text" placeholder="Fullname"
                                     id="name" class="form-control" name="fullname"
-                                    autofocurs>
-                                @if ($errors->has('fullname'))
-                                <span class="text-danger">
-                                    {{ $errors->first('fullname') }}</span>
-                                @endif
-                            </div>
-                            <div class="form-group mb-3">
+                                    autofocus>
+                                    @if ($errors->has('fullname'))
+                                        <span class="text-danger">
+                                            {{ $errors->first('fullname') }}</span>
+                                    @endif
+                                </div>
+                                <div class="form-group mb-3">
                                     <input type="text" placeholder="Email"
                                         id="email" class="form-control" name="email"
-                                        required autofocurs>
+                                        required autofocus>
                                     @if ($errors->has('email'))
-                                    <span class="text-danger">
-                                        {{ $errors->first('email') }}</span>
+                                        <span class="text-danger">
+                                            {{ $errors->first('email') }}</span>
                                     @endif
                                 </div>
                                 <div class="form-group mb-3">
                                     <input type="password" placeholder="Password"
                                     id="password" class="form-control"
                                     name="password" required>
-                                @if ($errors->has('password'))
-                                <span class="text-danger">
-                                    {{ $errors->first('password') }}</span>
-                                @endif
+                                    @if ($errors->has('password'))
+                                        <span class="text-danger">
+                                            {{ $errors->first('password') }}</span>
+                                    @endif
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="text" placeholder="Age"
+                                    id="age" class="form-control" name="age" required>
+                                    @if ($errors->has('age'))
+                                        <span class="text-danger">
+                                            {{ $errors->first('age') }}</span>
+                                    @endif
+                                </div>
+                                <div class="form-group mb-3">
+                                    <select id="gender" class="form-control" name="gender" required>
+                                        <option value="">Select Gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    @if ($errors->has('gender'))
+                                        <span class="text-danger">
+                                            {{ $errors->first('gender') }}</span>
+                                    @endif
                                 </div>
                                 <div class="d-grid mx-auto">
                                     <button type="submit"

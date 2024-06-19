@@ -44,6 +44,8 @@
                                 </div>
                                 <div class="d-grid mx-auto">
                                     <button type="submit" class="btn btn-dark btn-block">Login</button>
+                                    <br>
+                                    <a href="{{ route('register') }}" class="btn btn-dark btn-block">Register</a>
                                 </div>
                             </form>
                         </div>
