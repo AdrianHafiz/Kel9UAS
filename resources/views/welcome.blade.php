@@ -18,8 +18,8 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#test">Support</a></li>
-                        <li class="nav-item"><a class="nav-link" aria-current="page" href="#">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="#test">Feedback</a></li>
                     </ul>
                 </div>
             </div>
@@ -129,23 +129,30 @@
                         </div>
                     </div>
                     <!-- Side widget-->
-                     <div id="about" class="card mb-4">
-                    <div class="card mb-4">
+                    <div id="about" class="card mb-4">
                         <div class="card-header">About</div>
                         <div class="card-body">
                           Web ini disediakan untuk mereview film sesuai dengan keinginan anda. Berikan komen dan penilaian secara objektif.
                           Dapat menuliskan saran dan kritik di fitur komen.
                         </div>
                     </div>
-                </div>
+                    <div id="blog" class="card mb-4">
+                        <div class="card-header">Comments</div>
+                        <div class="card-body"> <textarea id="feedback" name="feedback" style="width: 300px; height: 50px; border: 2px solid black; border-radius: 5px; color: black;"; placeholder="Leave a comment"></textarea><br><br></div>
+                        <center><input type="submit" value="Send"></center><br>
+                    </div>
             </div>
         </div>
     </div>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
             <div id="test">
-            <div class="container"><p class="m-0 text-center text-white"> Saran atau Kritik <br> <br>
-                <input type="text">
+            <div class="container"><p class="m-0 text-center text-white"> Feedback<br>
+            <form action="your-server-endpoint" method="post">
+            <label for="feedback">Kesan dan Pesan</label><br>
+          <center> <textarea id="feedback" name="feedback" style="width: 300px; height: 50px; background-color: #333;  border: 2px solid #fff; border-radius: 5px; color: #fff;"; placeholder="Kesan dan Pesan"></textarea><br><br> </center>
+          <center>  <input type="submit" value="Send"> </center>
+        </form>
             </p></div>
             </div>
         </footer>
