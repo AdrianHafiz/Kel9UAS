@@ -33,19 +33,33 @@
                                     @endif
                                 </div>
                                 <div class="form-group mb-3">
-                                    <input type="password" placeholder="Password"
-                                           id="password" class="form-control" name="password"
-                                           required>
+                                    <div class="input-group">
+                                        <input type="password" placeholder="Password"
+                                               id="password" class="form-control" name="password"
+                                               required>
+                                        <button type="button" class="btn btn-outline-secondary" id="togglePassword">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                    </div>
                                     @if ($errors->has('password'))
                                         <span class="text-danger">
                                             {{ $errors->first('password') }}
                                         </span>
                                     @endif
                                 </div>
-                                <div class="d-grid mx-auto">
+                                <div class="form-group mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="remember" name="remember">
+                                        <label class="form-check-label" for="remember">
+                                            Remember Me
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="d-grid mx-auto mb-3">
                                     <button type="submit" class="btn btn-dark btn-block">Login</button>
-                                    <br>
-                                    <a href="{{ route('register') }}" class="btn btn-dark btn-block">Register</a>
+                                </div>
+                                <div class="text-center">
+                                    <a href="{{ route('register') }}" class="btn btn-dark">Register</a>
                                 </div>
                             </form>
                         </div>
@@ -55,3 +69,23 @@
         </div>
     </main>
 @endsection
+
+@push('scripts')
+    <script>
+        // Toggle password visibility
+        document.getElementById('togglePassword').addEventListener('click', function() {
+            var passwordInput = document.getElementById('password');
+            var icon = this.querySelector('i');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.remove('bi-eye');
+                icon.classList.add('bi-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.remove('bi-eye-slash');
+                icon.classList.add('bi-eye');
+            }
+        });
+    </script>
+@endpush

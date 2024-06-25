@@ -44,7 +44,7 @@
                             <div class="small text-muted">November 7, 2014</div>
                                 <h2 class="card-title">Interstellar</h2>
                             <p class="card-text">In Earth's future, a global crop blight and second Dust Bowl are slowly rendering the planet uninhabitable. Professor Brand (Michael Caine), a brilliant NASA physicist, is working on plans to save mankind by transporting Earth's population to a new home via a wormhole. But first, Brand must send former NASA pilot Cooper (Matthew McConaughey) and a team of researchers through the wormhole and across the galaxy to find out which of three planets could be mankind's new home.</p>
-                                    <a class="btn btn-primary" href="#!">Read more →</a>
+                                    <a class="btn btn-primary" href="{{ route('movie.mov1') }}">Read more →</a>
                              </div>
                         </div>
                     <!-- Nested row for non-featured blog posts-->
@@ -57,7 +57,7 @@
                                     <div class="small text-muted">July 6, 1994</div>
                                     <h2 class="card-title h4">Forrest Gump</h2>
                                     <p class="card-text">Forrest, a man with low IQ, recounts the early years of his life when he found himself in the middle of key historical events. All he wants now is to be reunited with his childhood sweetheart, Jenny.</p>
-                                    <a class="btn btn-primary" href="#!">Read more →</a>
+                                    <a class="btn btn-primary" href="{{ route('movie.mov2') }}">Read more →</a>
                                 </div>
                             </div>
                             <!-- Blog post-->
@@ -67,7 +67,7 @@
                                     <div class="small text-muted">June 5, 1998</div>
                                     <h2 class="card-title h4">The Truman Show</h2>
                                     <p class="card-text">He doesn't know it, but everything in Truman Burbank's (Jim Carrey) life is part of a massive TV set. Executive producer Christof (Ed Harris) orchestrates "The Truman Show," a live broadcast of Truman's every move captured by hidden cameras. Cristof tries to control Truman's mind, even removing his true love, Sylvia (Natascha McElhone), from the show and replacing her with Meryl (Laura Linney). As Truman gradually discovers the truth, however, he must decide whether to act on it.</p>
-                                    <a class="btn btn-primary" href="#!">Read more →</a>
+                                    <a class="btn btn-primary" href="{{ route('movie.mov3') }}">Read more →</a>
                                 </div>
                             </div>
                         </div>
@@ -79,7 +79,7 @@
                                     <div class="small text-muted">November 21, 2012</div>
                                     <h2 class="card-title h4">Life of Pi</h2>
                                     <p class="card-text">After deciding to sell their zoo in India and move to Canada, Santosh and Gita Patel board a freighter with their sons and some animals. A storm sinks the ship, leaving their teenage son, Pi as the sole human survivor.</p>
-                                    <a class="btn btn-primary" href="#!">Read more →</a>
+                                    <a class="btn btn-primary" href="{{ route('movie.mov4') }}">Read more →</a>
                                 </div>
                             </div>
                             <!-- Blog post-->
@@ -89,7 +89,7 @@
                                     <div class="small text-muted">November 4, 2016</div>
                                     <h2 class="card-title h4">Hacksaw Ridge</h2>
                                     <p class="card-text">The true story of Pfc. Desmond T. Doss (Andrew Garfield), who won the Congressional Medal of Honor despite refusing to bear arms during WWII on religious grounds. Doss was drafted and ostracized by fellow soldiers for his pacifist stance but went on to earn respect and adoration for his bravery, selflessness and compassion after he risked his life -- without firing a shot -- to save 75 men in the Battle of Okinawa.<br><br></p>
-                                    <a class="btn btn-primary" href="#!">Read more →</a>
+                                    <a class="btn btn-primary" href="{{ route('movie.mov5') }}">Read more →</a>
                                 </div>
                             </div>
                         </div>
