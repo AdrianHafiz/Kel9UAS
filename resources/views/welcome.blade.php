@@ -136,11 +136,24 @@
                           Dapat menuliskan saran dan kritik di fitur komen.
                         </div>
                     </div>
-                    <div id="blog" class="card mb-4">
-                        <div class="card-header">Comments</div>
-                        <div class="card-body"> <textarea id="feedback" name="feedback" style="width: 300px; height: 50px; border: 2px solid black; border-radius: 5px; color: black;"; placeholder="Leave a comment"></textarea><br><br></div>
-                        <center><input type="submit" value="Send"></center><br>
+                    <div class="card mb-4" id="blog">
+                    <div class="card-header">Comments</div>
+                    <div class="card-body">
+                        @if (session('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+                        <form method="POST" action="{{ route('comments.store') }}">
+                            @csrf
+                            <textarea id="feedback" name="feedback" style="width: 300px; height: 50px; border: 2px solid black; border-radius: 5px; color: black;" placeholder="Leave a comment"></textarea><br><br>
+                            @error('feedback')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                            <center><input type="submit" value="Send"></center><br>
+                        </form>
                     </div>
+                </div>
             </div>
         </div>
     </div>
