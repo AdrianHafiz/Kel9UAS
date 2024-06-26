@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Response;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\RatingController;
 
 
 Route::get('/', function () {
@@ -45,3 +46,5 @@ Route::get('/comments', [CommentController::class, 'index'])->name('comments.ind
 Route::post('/comments', [CommentController::class, 'store'])->name('comments.store');
 Route::get('/comments', [CommentController::class, 'showComments'])->name('comments.show');
 Route::delete('/comments/{id}', [CommentController::class, 'destroy'])->name('comments.destroy');
+Route::post('/ratings', [RatingController::class, 'store'])->name('ratings.store');
+Route::post('/ratings', [RatingController::class, 'store'])->middleware('auth')->name('ratings.store');
