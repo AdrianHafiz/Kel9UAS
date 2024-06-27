@@ -51,4 +51,4 @@ Route::post('/ratings/store', [RatingController::class, 'store'])->name('ratings
 Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback.index');
 Route::post('/feedback', [FeedbackController::class, 'store'])->name('feedback.store');
 Route::get('/feedback', [FeedbackController::class, 'showFeedback'])->name('feedback.show');
-
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');

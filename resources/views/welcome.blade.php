@@ -20,6 +20,13 @@
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
                         <li class="nav-item"><a class="nav-link" aria-current="page" href="#test">Feedback</a></li>
+                        <li class="nav-item">
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <button type="submit" class="btn btn-link nav-link" style="text-decoration: none;">Logout</button>
+                            </form>
+                        </li>
+                    </ul>
                     </ul>
                 </div>
             </div>
