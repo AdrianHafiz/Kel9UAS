@@ -101,7 +101,7 @@
                 <!-- Bagian untuk menampilkan rating dan review -->
                 <div class="mt-4">
                     <h4>Reviews</h4>
-                    @if($movie = App\Models\Movie::find(1))
+                    @if($movie = App\Models\Movie::find(2))
                         @foreach($movie->ratings as $rating)
                             <div class="review">
                                 <p><strong>Rating:</strong> {{ $rating->rating }} stars</p>
