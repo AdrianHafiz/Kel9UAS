@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Response;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\RatingController;
+use App\Http\Controllers\FeedbackController;
 
 
 Route::get('/', function () {
@@ -47,4 +48,7 @@ Route::post('/comments', [CommentController::class, 'store'])->name('comments.st
 Route::get('/comments', [CommentController::class, 'showComments'])->name('comments.show');
 Route::delete('/comments/{id}', [CommentController::class, 'destroy'])->name('comments.destroy');
 Route::post('/ratings/store', [RatingController::class, 'store'])->name('ratings.store');
+Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback.index');
+Route::post('/feedback', [FeedbackController::class, 'store'])->name('feedback.store');
+Route::get('/feedback', [FeedbackController::class, 'showFeedback'])->name('feedback.show');
 

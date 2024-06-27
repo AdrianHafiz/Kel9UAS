@@ -52,7 +52,7 @@
                         <div class="col-lg-6">
                             <!-- Blog post-->
                             <div id="forrest" class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://www.petersbilliards.com/images/jcogs_img/cache/forrest-gump-movie-poster_-_28de80_-_05eceabacb1dc8673d4f4daff4ac77d09b282167.jpg" alt="..." /></a>
+                                <a href="#!"><img class="card-img-top" src="https://www.petersbilliards.com/images/jcogs_img/cache/forrest-gump-movie-poster_-28de80-_05eceabacb1dc8673d4f4daff4ac77d09b282167.jpg" alt="..." /></a>
                                 <div class="card-body">
                                     <div class="small text-muted">July 6, 1994</div>
                                     <h2 class="card-title h4">Forrest Gump</h2>
@@ -159,19 +159,29 @@
     </div>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div id="test">
-            <div class="container"><p class="m-0 text-center text-white"> Feedback<br>
-            <form action="your-server-endpoint" method="post">
-            <label for="feedback">Kesan dan Pesan</label><br>
-          <center> <textarea id="feedback" name="feedback" style="width: 300px; height: 50px; background-color: #333;  border: 2px solid #fff; border-radius: 5px; color: #fff;"; placeholder="Kesan dan Pesan"></textarea><br><br> </center>
-          <center>  <input type="submit" value="Send"> </center>
-        </form>
-            </p></div>
+        <div class="container">
+            <div class="card mb-4" id="blog">
+                <div class="card-header">Feedback</div>
+                <div class="card-body">
+                    @if (session('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+                    <form method="POST" action="{{ route('feedback.store') }}">
+                    @csrf
+                <center>   <textarea id="feedback" name="feedback" style="width: 300px; height: 50px; border: 2px solid black; border-radius: 5px; color: black;" placeholder="Give a feedback"></textarea><br><br> </center>
+                        @error('feedback')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                        <center><input type="submit" value="Send" class="btn btn-primary"></center><br>
+                    </form>
+                </div>
             </div>
-        </footer>
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-    </body>
+   </body>
 </html>
