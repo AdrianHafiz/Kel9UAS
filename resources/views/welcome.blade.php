@@ -167,7 +167,7 @@
         <!-- Footer-->
         <footer class="py-5 bg-dark">
         <div class="container">
-            <div class="card mb-4" id="blog">
+            <div class="card mb-4" id="test">
                 <div class="card-header">Feedback</div>
                 <div class="card-body">
                     @if (session('success'))
