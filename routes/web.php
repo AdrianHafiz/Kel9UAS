@@ -34,7 +34,7 @@ Route::get('/css/app.css', function () {
 
 Route::get("/login", [AuthController::class, "login"])->name("login");
 Route::post("/login", [AuthController::class, "loginPost"])->name("login.post");
-Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
 Route::get("/register", [AuthController::class, "register"])->name("register");
 Route::post("/register", [AuthController::class, "registerPost"])->name("register.post");
 Route::get('/movie/mov1', [MovieController::class, 'mov1'])->name('movie.mov1');
@@ -46,5 +46,5 @@ Route::get('/comments', [CommentController::class, 'index'])->name('comments.ind
 Route::post('/comments', [CommentController::class, 'store'])->name('comments.store');
 Route::get('/comments', [CommentController::class, 'showComments'])->name('comments.show');
 Route::delete('/comments/{id}', [CommentController::class, 'destroy'])->name('comments.destroy');
-Route::post('/ratings', [RatingController::class, 'store'])->name('ratings.store');
-Route::post('/ratings', [RatingController::class, 'store'])->middleware('auth')->name('ratings.store');
+Route::post('/ratings/store', [RatingController::class, 'store'])->name('ratings.store');
+
